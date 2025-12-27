@@ -1,0 +1,34 @@
+﻿MINI PROJECT HANDBOOK ASSIGNMENT
+Code & Title: 25ITT11 - C Programming
+
+The Add Room Module
+
+void addRoom() {
+    FILE *fp = fopen("rooms.txt", "a");
+
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        return;
+    }
+
+    struct Room r;
+
+    printf("\n--- Add New Room ---\n");
+    printf("Enter Room Number: ");
+    scanf("%d", &r.roomNo);
+
+    printf("Enter Room Type (Single/Double/Suite): ");
+    scanf("%s", r.type);
+
+    printf("Enter Price per Night: ");
+    scanf("%f", &r.price);
+
+    r.isBooked = 0; // Default: Available
+
+    fprintf(fp, "%d %s %.2f %d\n", r.roomNo, r.type, r.price, r.isBooked);
+
+    fclose(fp);
+
+    printf("Room %d added successfully!\n", r.roomNo);
+}
+
