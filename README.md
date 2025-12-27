@@ -1,5 +1,7 @@
 MINI PROJECT HANDBOOK ASSIGNMENT
+
 Course Code & Title: 25ITT11 – C Programming
+
 Module: Add Room Module
 
 Function Definition
